@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		431971AA293057730059B5A2 /* Iphone_KeypadApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431971A9293057730059B5A2 /* Iphone_KeypadApp.swift */; };
-		431971AC293057730059B5A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431971AB293057730059B5A2 /* ContentView.swift */; };
+		431971AC293057730059B5A2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431971AB293057730059B5A2 /* MainView.swift */; };
 		431971AE293057740059B5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431971AD293057740059B5A2 /* Assets.xcassets */; };
 		431971B2293057740059B5A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431971B1293057740059B5A2 /* Preview Assets.xcassets */; };
 		431971BC293057750059B5A2 /* Iphone_KeypadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431971BB293057750059B5A2 /* Iphone_KeypadTests.swift */; };
 		431971C6293057750059B5A2 /* Iphone_KeypadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431971C5293057750059B5A2 /* Iphone_KeypadUITests.swift */; };
 		431971C8293057750059B5A2 /* Iphone_KeypadUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431971C7293057750059B5A2 /* Iphone_KeypadUITestsLaunchTests.swift */; };
+		43DB0DA029324EFC0034374E /* DialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DB0D9F29324EFC0034374E /* DialButton.swift */; };
+		43DB0DA2293250F50034374E /* Dial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DB0DA1293250F50034374E /* Dial.swift */; };
+		43DB0DA429325BA40034374E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DB0DA329325BA40034374E /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		431971A6293057730059B5A2 /* Iphone_Keypad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iphone_Keypad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		431971A9293057730059B5A2 /* Iphone_KeypadApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iphone_KeypadApp.swift; sourceTree = "<group>"; };
-		431971AB293057730059B5A2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		431971AB293057730059B5A2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		431971AD293057740059B5A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		431971AF293057740059B5A2 /* Iphone_Keypad.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Iphone_Keypad.entitlements; sourceTree = "<group>"; };
 		431971B1293057740059B5A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -45,6 +48,9 @@
 		431971C1293057750059B5A2 /* Iphone_KeypadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Iphone_KeypadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		431971C5293057750059B5A2 /* Iphone_KeypadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iphone_KeypadUITests.swift; sourceTree = "<group>"; };
 		431971C7293057750059B5A2 /* Iphone_KeypadUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iphone_KeypadUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		43DB0D9F29324EFC0034374E /* DialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialButton.swift; sourceTree = "<group>"; };
+		43DB0DA1293250F50034374E /* Dial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dial.swift; sourceTree = "<group>"; };
+		43DB0DA329325BA40034374E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				431971A9293057730059B5A2 /* Iphone_KeypadApp.swift */,
-				431971AB293057730059B5A2 /* ContentView.swift */,
+				431971AB293057730059B5A2 /* MainView.swift */,
+				43DB0D9F29324EFC0034374E /* DialButton.swift */,
+				43DB0DA1293250F50034374E /* Dial.swift */,
+				43DB0DA329325BA40034374E /* ContentView.swift */,
 				431971AD293057740059B5A2 /* Assets.xcassets */,
 				431971AF293057740059B5A2 /* Iphone_Keypad.entitlements */,
 				431971B0293057740059B5A2 /* Preview Content */,
@@ -259,8 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				431971AC293057730059B5A2 /* ContentView.swift in Sources */,
+				431971AC293057730059B5A2 /* MainView.swift in Sources */,
+				43DB0DA029324EFC0034374E /* DialButton.swift in Sources */,
 				431971AA293057730059B5A2 /* Iphone_KeypadApp.swift in Sources */,
+				43DB0DA429325BA40034374E /* ContentView.swift in Sources */,
+				43DB0DA2293250F50034374E /* Dial.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
