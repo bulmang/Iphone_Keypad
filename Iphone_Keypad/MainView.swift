@@ -8,102 +8,52 @@
 import SwiftUI
 
 struct MainView: View {
-
-    var number: String
+    
+    @Binding var childNumber: String
     
     var body: some View {
-//        VStack(spacing: 15) {
-//
-//            HStack(spacing:25){
-//
-//                CustomButton(number: "1")
-//
-//                CustomCharButton(number: "2", char1: "A", char2: "B", char3: "C")
-//
-//                CustomCharButton(number: "3", char1: "D", char2: "E", char3: "F")
-//
-//            }
-//
-//            HStack(spacing:25){
-//
-//                CustomCharButton(number: "4", char1: "G", char2: "H", char3: "I")
-//
-//                CustomCharButton(number: "5", char1: "J", char2: "K", char3: "L")
-//
-//                CustomCharButton(number: "6", char1: "M", char2: "N", char3: "O")
-//
-//            }
-//
-//            HStack(spacing:25){
-//
-//                CustomCharButton2(number: "7", char1: "P", char2: "Q", char3: "R", char4: "S")
-//
-//                CustomCharButton(number: "8", char1: "T", char2: "U", char3: "V")
-//
-//                CustomCharButton2(number: "9", char1: "W", char2: "X", char3: "V", char4: "Z")
-//
-//            }
-//
-//            HStack(spacing:25){
-//
-//                Button {
-//
-//                } label: {
-//                    VStack(spacing: 0){
-//                        Text("*")
-//                            .font(.system(size: 70))
-//                            .padding(.top,30)
-//                    }
-//                    .foregroundColor(.white)
-//                    .font(.title)
-//                    .frame(width: 85,height: 85)
-//                    .background(.gray)
-//                    .clipShape(Circle())
-//
-//                }
-//
-//                CustomCharButton(number: "0", char1: "A", char2: "B", char3: "C")
-//
-//                Button {
-//
-//                } label: {
-//                    VStack(spacing: 0){
-//                        Text("#")
-//                            .font(.system(size: 35))
-//                            .padding(.top,0)
-//                    }
-//                    .foregroundColor(.white)
-//                    .font(.title)
-//                    .frame(width: 85,height: 85)
-//                    .background(.gray)
-//                    .clipShape(Circle())
-//
-//                }
-//
-//            }
-//
-//
-//        }
-//        .padding()
-        VStack(spacing: 0){
+
+        ZStack{
             
-            Text(number)
-                .font(.system(size: 40))
             
-            Spacer()
             
-            ForEach(dialDummy, id: \.self){ items in
-                HStack{
-                    ForEach(items, id: \.self) { item in
-                        DialButton(dialNumber: Dial(mainNumber: item.mainNumber, subAlphabet: item.subAlphabet),
-                                   buttonColor: item.buttonColor)
+            VStack(spacing: 0){
+                
+                Text(childNumber)
+                    .font(.system(size: 40))
+                
+                if childNumber != ""{
+                    
+                    Button{
+                        
+                    } label: {
+                        Text("번호추가")
+                            .foregroundColor(.blue)
+                            .padding(.top,10)
                     }
                 }
+                
+                
+                Spacer()
+                
+                ForEach(dialDummy, id: \.self){ items in
+                    HStack{
+                        ForEach(items, id: \.self) { item in
+                            DialButton(dialNumber: Dial(mainNumber: item.mainNumber, subAlphabet: item.subAlphabet),
+                                       buttonColor: item.buttonColor, childNumber: $childNumber)
+                        }
+                    }
+                }
+                
+                
+                
             }
+            .padding(.top,60)
             
             
+
         }
-        .padding(.top,100)
+
     }
 }
 

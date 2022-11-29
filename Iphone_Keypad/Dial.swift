@@ -13,6 +13,7 @@ struct Dial: Identifiable, Hashable {
     var mainNumber: String
     var subAlphabet: [String]
     var buttonColor: Color? = Color("NumberColor")
+    
 }
 
 var dialDummy = [[Dial(mainNumber: "1",
@@ -39,7 +40,8 @@ var dialDummy = [[Dial(mainNumber: "1",
                        subAlphabet: ["","+",""]),
                    Dial(mainNumber: "#",
                         subAlphabet: ["","",""])],
-                 [Dial(mainNumber: "Phone", subAlphabet: ["","",""] , buttonColor: Color("VoiceColor") )]
+                 [Dial(mainNumber: "", subAlphabet: ["","",""] , buttonColor: Color("VoiceColor") )],
+                 [Dial(mainNumber: "delete", subAlphabet: ["","",""]  )]
                   
                  
 ]

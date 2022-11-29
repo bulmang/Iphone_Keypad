@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State var currentTab: Tab = .keypad
+    @State var Number: String = ""
     
     var wordDummy: [String] = ["즐겨찾기","최근통화","연락처","키패드","음성사서함"]
     
@@ -27,7 +28,7 @@ struct ContentView: View {
                 Text("phonenubmer")
                     .tag(Tab.phonenumber)
                 
-                MainView(number: "1")
+                MainView(childNumber: $Number)
                     .tag(Tab.keypad)
                 
                 Text("voicerecord")
