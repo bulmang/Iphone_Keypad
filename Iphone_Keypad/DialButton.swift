@@ -12,6 +12,11 @@ struct DialButton: View {
     let dialNumber: Dial
     let buttonColor : Color? 
     @Binding var childNumber: String
+    @GestureState var press = false
+    let longGesture = TapGesture().onEnded {
+        print("Gesture on VStack.")
+    }
+    
     var body: some View {
         Button{
             childNumber += dialNumber.mainNumber
