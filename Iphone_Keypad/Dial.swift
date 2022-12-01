@@ -40,8 +40,9 @@ var dialDummy = [[Dial(mainNumber: "1",
                        subAlphabet: ["","+",""]),
                    Dial(mainNumber: "#",
                         subAlphabet: ["","",""])],
-                 [Dial(mainNumber: "", subAlphabet: ["","",""] , buttonColor: Color("VoiceColor") )],
-                 [Dial(mainNumber: "delete", subAlphabet: ["","",""]  )]
+                 [Dial(mainNumber: "", subAlphabet: ["","",""] , buttonColor: Color(.white) ),
+                 Dial(mainNumber: "phone", subAlphabet: ["","",""] , buttonColor: Color("VoiceColor") ),
+                 Dial(mainNumber: "delete", subAlphabet: ["","",""] , buttonColor: Color(.white)  )]
                   
                  
 ]

@@ -11,6 +11,17 @@ struct MainView: View {
     
     @Binding var childNumber: String
     
+    fileprivate func keypadDialView() -> ForEach<[[Dial]], [Dial], HStack<ForEach<[Dial], Dial, DialButton>>> {
+        return ForEach(dialDummy, id: \.self){ items in
+            HStack{
+                ForEach(items, id: \.self) { item in
+                    DialButton(dialNumber: Dial(mainNumber: item.mainNumber, subAlphabet: item.subAlphabet),
+                               buttonColor: item.buttonColor, childNumber: $childNumber)
+                }
+            }
+        }
+    }
+    
     var body: some View {
 
         ZStack{
@@ -18,6 +29,8 @@ struct MainView: View {
             
             
             VStack(spacing: 0){
+                
+                
                 
                 Text(childNumber)
                     .font(.system(size: 40))
@@ -36,14 +49,7 @@ struct MainView: View {
                 
                 Spacer()
                 
-                ForEach(dialDummy, id: \.self){ items in
-                    HStack{
-                        ForEach(items, id: \.self) { item in
-                            DialButton(dialNumber: Dial(mainNumber: item.mainNumber, subAlphabet: item.subAlphabet),
-                                       buttonColor: item.buttonColor, childNumber: $childNumber)
-                        }
-                    }
-                }
+                keypadDialView()
                 
                 
                 
@@ -55,6 +61,7 @@ struct MainView: View {
         }
 
     }
+    
 }
 
 struct MainView_Previews: PreviewProvider {
